@@ -1,0 +1,33 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  web: true
+
+  color: "#fdfdf8"
+  color_dark: "#111111"
+
+  image: "assets/images/splash_screen/logo_light.png"
+  # background_image: "assets/images/splash_screen/background.png"
+  branding: "assets/images/splash_screen/branding_light.png"
+
+  image_dark: "assets/images/splash_screen/logo_dark.png"
+  # background_image_dark: "assets/images/splash_screen/background.png"
+  branding_dark: "assets/images/splash_screen/branding_dark.png"
+
+  android_12: 
+    color: "#fdfdf8"
+    image: "assets/images/splash_screen/logo_light.png"
+    branding: "assets/images/splash_screen/branding_light.png"
+
+    color_dark: "#111111"
+    image_dark: "assets/images/splash_screen/logo_light.png"
+    branding_dark: "assets/images/splash_screen/branding_light.png"
+
+# REQUIREMENTS:
+# All images should be png
+# 1. For iOS and Android
+#     - the background image must be 1290px x 2796px
+#     - the logo image must be 600px x 600px
+#     - the branding image must be 750px x 750px and should contain 100px of padding top and bottom.
+# 2. For Android 12, the logo image must be 1152px x 1152px, but the logo should be contained within a circle of diameter 768px in the center of the image.
+#

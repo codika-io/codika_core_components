@@ -1,0 +1,103 @@
+name: core_codemagic
+description: A flutter brick that fits into a PADI architecture.
+
+# The following defines the brick repository url.
+# Uncomment and update the following line before publishing the brick.
+# repository: https://github.com/my_org/my_repo
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 0.1.0+1
+
+# The following defines the environment for the current brick.
+# It includes the version of mason that the brick requires.
+environment:
+  mason: ">=0.1.0 <0.2.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, or array)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+# TO add: 
+
+
+vars:
+  has_core_firebase:
+    type: boolean
+    description: Whether the app has Firebase
+    default: false
+    prompt: Does the app have Firebase?
+  has_core_shorebird:
+    type: boolean
+    description: Whether the app has Shorebird
+    default: false
+    prompt: Does the app have Shorebird?
+  app_store_connect_key_codemagic_name:
+    type: string
+    description: The name of the App Store Connect API Key
+    default: CodeMagic API Key
+    prompt: What name did you give to the App Store Connect API Key in Codemagic?
+  android_signing_key_codemagic_name:
+    type: string
+    description: The name of the Android signing key
+    default: CodeMagic Signing Key
+    prompt: What name did you give to the Android signing key in Codemagic?
+  codemagic_certificate_name:
+    type: string
+    description: The name of the certificate in Codemagic
+    default: CodeMagic Certificate
+    prompt: What name did you give to the certificate in Codemagic?
+  codemagic_provisioning_profile_name_stag:
+    type: string
+    description: The name of the provisioning profile in Codemagic
+    default: CodeMagic Provisioning Profile (Staging)
+    prompt: What name did you give to the provisioning profile in Codemagic (Staging)?
+  codemagic_provisioning_profile_name_test:
+    type: string
+    description: The name of the provisioning profile in Codemagic
+    default: CodeMagic Provisioning Profile (Test)
+    prompt: What name did you give to the provisioning profile in Codemagic (Test)?
+  codemagic_provisioning_profile_name_prod:
+    type: string
+    description: The name of the provisioning profile in Codemagic
+    default: CodeMagic Provisioning Profile (Production)
+    prompt: What name did you give to the provisioning profile in Codemagic (Production)?
+  app_id_ios_stag:
+    type: number
+    description: The App ID for iOS Staging
+    default: 1234567890
+    prompt: What is the App ID in the App Store Connect (Staging)?
+  app_id_ios_test:
+    type: number
+    description: The App ID for iOS Test
+    default: 1234567890
+    prompt: What is the App ID in the App Store Connect (Test)?
+  app_id_ios_prod:
+    type: number
+    description: The App ID for iOS Production
+    default: 1234567890
+    prompt: What is the App ID in the App Store Connect (Production)?
+  email_address:
+    type: string
+    description: An email address used to notify about the build status
+    default: email@example.com
+    prompt: What is the email address to notify about the build status?
+  ios_copyright:
+    type: string
+    description: The copyright for iOS
+    default: © 2024 Your Company
+    prompt: What is the copyright for iOS?
+  flutter_version:
+    type: string
+    description: The version of Flutter to use
+    prompt: What is the version of Flutter to use?
+    
+  
+
+

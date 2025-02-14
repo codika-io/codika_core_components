@@ -1,0 +1,9 @@
+{
+  "modifications": [
+    {
+      "key": "ITSAppUsesNonExemptEncryption",
+      "type": "boolean",
+      "value": false
+    }
+  ]
+}

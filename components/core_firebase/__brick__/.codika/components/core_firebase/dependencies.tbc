@@ -1,0 +1,6 @@
+firebase_core
+firebase_storage
+firebase_analytics
+cloud_firestore
+cloud_functions
+firebase_crashlytics

@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TEST | Profile" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="additionalArgs" value="--profile" />
+    <option name="additionalArgs" value="--dart-define-from-file=.codika/config/.env" />
+    <option name="buildFlavor" value="test" />
+    <option name="filePath" value="$PROJECT_DIR$/lib/main_test.dart" />
+    <method v="2" />
+  </configuration>
+</component>

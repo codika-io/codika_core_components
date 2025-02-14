@@ -1,0 +1,53 @@
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+  flavors:
+    {{#has_dev_env}}dev:
+      app:
+        name: "{{project_name.titleCase()}} Dev"
+      android:
+        applicationId: "{{android_package_name}}.dev"
+        icon: "assets/envs/dev/app-icon.png"
+        adaptiveIcon:
+          foreground: "assets/envs/dev/app-icon-foreground.png"
+          background: "assets/envs/dev/app-icon-background.png"
+      ios:
+        bundleId: "{{ios_bundle_id}}.dev"
+        icon: "assets/envs/dev/app-icon.png"{{/has_dev_env}}
+    {{#has_stag_env}}stag:
+      app:
+        name: "{{project_name.titleCase()}} Stag"
+      android:
+        applicationId: "{{android_package_name}}.stag"  
+        icon: "assets/envs/stag/app-icon.png"
+        adaptiveIcon:
+          foreground: "assets/envs/stag/app-icon-foreground.png"
+          background: "assets/envs/stag/app-icon-background.png"
+      ios:
+        bundleId: "{{ios_bundle_id}}.stag"
+        icon: "assets/envs/stag/app-icon.png"{{/has_stag_env}}
+    {{#has_test_env}}test:
+      app:
+        name: "{{project_name.titleCase()}} Test"
+      android:
+        applicationId: "{{android_package_name}}.test"  
+        icon: "assets/envs/test/app-icon.png"
+        adaptiveIcon:
+          foreground: "assets/envs/test/app-icon-foreground.png"
+          background: "assets/envs/test/app-icon-background.png"
+      ios:
+        bundleId: "{{ios_bundle_id}}.test"
+        icon: "assets/envs/test/app-icon.png"{{/has_test_env}}
+    {{#has_prod_env}}prod:
+      app:
+        name: "{{project_name.titleCase()}}"
+      android:
+        applicationId: "{{android_package_name}}"  
+        icon: "assets/envs/prod/app-icon.png"
+        adaptiveIcon:
+          foreground: "assets/envs/prod/app-icon-foreground.png"
+          background: "assets/envs/prod/app-icon-background.png"
+      ios:
+        bundleId: "{{ios_bundle_id}}"
+        icon: "assets/envs/prod/app-icon.png"{{/has_prod_env}}

@@ -1,0 +1,124 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {{#has_dev_env}}
+        {
+            "name": "DEV | Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "flutterMode": "debug",
+            "toolArgs": ["--dart-define-from-file=.codika/config/dev/.env"],
+            "args" : ["--flavor", "dev"]
+        },
+        {
+            "name": "DEV | Profile",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "flutterMode": "profile",
+            "toolArgs": ["--dart-define-from-file=.codika/config/dev/.env"],
+            "args" : ["--flavor", "dev"]
+        },
+        {
+            "name": "DEV | Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "flutterMode": "release",
+            "toolArgs": ["--dart-define-from-file=.codika/config/dev/.env"],
+            "args" : ["--flavor", "dev"]
+        },
+        {{/has_dev_env}}
+        {{#has_test_env}}
+        {
+            "name": "TEST | Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_test.dart",
+            "flutterMode": "debug",
+            "toolArgs": ["--dart-define-from-file=.codika/config/test/.env"],
+            "args" : ["--flavor", "test"]
+        },
+        {
+            "name": "TEST | Profile",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_test.dart",
+            "flutterMode": "profile",
+            "toolArgs": ["--dart-define-from-file=.codika/config/test/.env"],
+            "args" : ["--flavor", "test"]
+        },
+        {
+            "name": "TEST | Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_test.dart",
+            "flutterMode": "release",
+            "toolArgs": ["--dart-define-from-file=.codika/config/test/.env"],
+            "args" : ["--flavor", "test"]
+        },
+        {{/has_test_env}}
+        {{#has_stag_env}}
+        {
+            "name": "STAG | Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_stag.dart",
+            "flutterMode": "debug",
+            "toolArgs": ["--dart-define-from-file=.codika/config/stag/.env"],
+            "args" : ["--flavor", "stag"]
+        },
+        {
+            "name": "STAG | Profile",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_stag.dart",
+            "flutterMode": "profile",
+            "toolArgs": ["--dart-define-from-file=.codika/config/stag/.env"],
+            "args" : ["--flavor", "stag"]
+        },
+        {
+            "name": "STAG | Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_stag.dart",
+            "flutterMode": "release",
+            "toolArgs": ["--dart-define-from-file=.codika/config/stag/.env"],
+            "args" : ["--flavor", "stag"]
+        },
+        {{/has_stag_env}}
+        {{#has_prod_env}}
+        {
+            "name": "PROD | Debug",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "flutterMode": "debug",
+            "toolArgs": ["--dart-define-from-file=.codika/config/prod/.env"],
+            "args" : ["--flavor", "prod"]
+        },
+        {
+            "name": "PROD | Profile",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "flutterMode": "profile",
+            "toolArgs": ["--dart-define-from-file=.codika/config/prod/.env"],
+            "args" : ["--flavor", "prod"]
+        },
+        {
+            "name": "PROD | Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "flutterMode": "release",
+            "toolArgs": ["--dart-define-from-file=.codika/config/prod/.env"],
+            "args" : ["--flavor", "prod"]
+        }   
+        {{/has_prod_env}}
+    ]
+}

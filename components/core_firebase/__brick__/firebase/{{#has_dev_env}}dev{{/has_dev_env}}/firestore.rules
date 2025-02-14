@@ -1,0 +1,42 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper function to check if the user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper function to check if the authenticated user matches the given UID
+    function isUser(uid) {
+      return isAuthenticated() && request.auth.uid == uid;
+    }
+    
+    // Helper function to check if the authenticated user matches the given UID
+    function loggedUid() {
+      return request.auth.uid;
+    }
+    
+    function isAdmin() {
+      return true;
+      // let userProfile = get(/databases/$(database)/documents/user_profiles/$(loggedUid()));
+      // return userProfile.data.role == 'admin';
+    }
+
+    // Helper function to get the incoming data
+    function incomingData() {
+      return request.resource.data;
+    }
+
+    // Helper function to get the existing data
+    function existingData() {
+      return resource.data;
+    }
+
+    // CODIKA_INSERT_RULES_HERE
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

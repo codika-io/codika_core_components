@@ -1,0 +1,6 @@
+analyzer: 
+  exclude: 
+    - '**/__brick__/**'
+    - '**/functions/**'
+    - '**/functions_python/**'
+  
