@@ -3,4 +3,5 @@ analyzer:
     - '**/__brick__/**'
     - '**/functions/**'
     - '**/functions_python/**'
+    - '**/hooks/**'
   
