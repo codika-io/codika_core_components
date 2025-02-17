@@ -1,6 +1,6 @@
 {
-  "version": "0.2.23",
-  "created_at": "2025-02-14T14:47:20 UTC",
+  "version": "0.2.28",
+  "created_at": "2025-02-17T14:02:58 UTC",
   "components": [
     "core_app_icon",
     "core_codemagic",
